@@ -21,5 +21,15 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
+	int n, a, b, c;
+	cin >> n >> a >> b >> c;
+	int total = 0;
+	n--;
+	if(n > 0)
+	total += min(a, b);
+	n--;
+	if(n > 0)
+	total += n * min(min(a, b), c);
+	cout << total << "\n";
 	return 0;
 }
